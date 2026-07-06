@@ -123,6 +123,27 @@
       </div>`).join("");
   }
 
+  /* ---------- Basic protection against copy / inspection ---------- */
+  function protectSite() {
+    document.addEventListener("contextmenu", (e) => {
+      if (e.target.closest("img, video, canvas")) e.preventDefault();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      const key = e.key.toLowerCase();
+      const isDevTools = e.key === "F12" || (e.ctrlKey && e.shiftKey && key === "i") || (e.ctrlKey && key === "u") || (e.ctrlKey && key === "s");
+      if (isDevTools) e.preventDefault();
+    }, { capture: true });
+
+    document.addEventListener("copy", (e) => {
+      if (window.getSelection() && window.getSelection().toString().trim()) e.preventDefault();
+    });
+
+    document.addEventListener("dragstart", (e) => {
+      if (e.target.tagName === "IMG" || e.target.tagName === "A") e.preventDefault();
+    });
+  }
+
   /* ---------- Preloader ---------- */
   function preloader() {
     const el = $("#preloader"), bar = $("#preloaderBar"), pct = $("#preloaderPct");
@@ -424,6 +445,7 @@
   /* ---------- Init ---------- */
   document.addEventListener("DOMContentLoaded", () => {
     $("#year").textContent = new Date().getFullYear();
+    protectSite();
     render();
     preloader();
     smoothScroll();
