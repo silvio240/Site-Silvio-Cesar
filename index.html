@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050505" />
+
+    <!-- Primary SEO -->
+    <title>Silvio DevWeb — Criação de sites profissionais — Desenvolvedor Front-end & Especialista em IA Aplicada</title>
+    <meta name="description" content="Silvio Cesar — Desenvolvedor Front-end, Designer e especialista em IA aplicada. Criação de sites profissionais, landing pages de alta conversão, e-commerce e automações com IA para empresas de qualquer segmento." />
+    <meta name="keywords" content="desenvolvedor front-end, criação de sites, landing page, e-commerce, IA aplicada, tráfego pago, UI UX, Silvio DevWeb, Cachoeira Bahia" />
+    <meta name="author" content="Silvio Cesar" />
+    <link rel="canonical" href="https://silviodevweb.com.br/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Silvio DevWeb — Criação de sites profissionais" />
+    <meta property="og:description" content="Criação de sites profissionais, landing pages de alta conversão e automações com IA. Transformando ideias em experiências digitais." />
+    <meta property="og:image" content="Silviocesar.jpeg" />
+    <meta property="og:url" content="https://silviodevweb.com.br/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Silvio Cesar — Desenvolvedor Front-end & IA Aplicada" />
+    <meta name="twitter:description" content="Criação de sites profissionais e automações com IA. Experiências digitais de alto nível." />
+    <meta name="twitter:image" content="Silviocesar.jpeg" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23050505'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%235b8cff'%3ES%3C/text%3E%3C/svg%3E" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Silvio Cesar",
+      "jobTitle": "Desenvolvedor Front-end | Especialista em IA Aplicada | Designer",
+      "address": { "@type": "PostalAddress", "addressLocality": "Cachoeira", "addressRegion": "BA", "addressCountry": "BR" },
+      "url": "https://silviodevweb.com.br/",
+      "sameAs": ["https://github.com/silvio240", "https://instagram.com/silviodevweb"]
+    }
+    </script>
+  </head>
+
+  <body>
+    <noscript>Ative o JavaScript para viver a experiência completa deste site.</noscript>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+      <div class="preloader__inner">
+        <div class="preloader__mark">SC</div>
+        <div class="preloader__bar"><span id="preloaderBar"></span></div>
+        <div class="preloader__pct" id="preloaderPct">0%</div>
+      </div>
+    </div>
+
+    <!-- ============ PROGRESS BAR ============ -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ============ CUSTOM CURSOR ============ -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+    <!-- Ambient background layers -->
+    <canvas id="fx" class="fx-canvas" aria-hidden="true"></canvas>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="orb orb--1" aria-hidden="true"></div>
+    <div class="orb orb--2" aria-hidden="true"></div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+      <a href="#hero" class="nav__brand">
+        <span class="nav__name">Silvio<span>DevWeb</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#portfolio" class="nav__link">Portfólio</a>
+        <a href="#precos" class="nav__link">Preços</a>
+        <a href="#calculadora" class="nav__link">Orçamento</a>
+        <a href="#contato" class="nav__link">Contato</a>
+      </nav>
+      <a href="#calculadora" class="btn btn--primary nav__cta">Solicitar orçamento</a>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero section" id="hero">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <span class="pill reveal"><i class="fa-solid fa-bolt"></i> Desenvolvedor Web Sênior · Cachoeira — BA</span>
+          <h1 class="hero__title">
+            <span class="line" data-split>Transformando ideias</span>
+            <span class="line" data-split>em <em>experiências</em> digitais</span>
+          </h1>
+          <div class="hero__typed">
+            <span class="hero__typed-prefix">Eu construo</span>
+            <span id="typed" class="grad-text"></span>
+          </div>
+          <p class="hero__desc reveal">Sites profissionais, landing pages de alta conversão, e-commerce e automações com Inteligência Artificial — para empresas de qualquer segmento.</p>
+          <div class="hero__cta reveal">
+            <a href="#calculadora" class="btn btn--primary">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#portfolio" class="btn btn--ghost">Ver projetos</a>
+          </div>
+          <div class="hero__stats reveal">
+            <div class="stat"><b data-count="6">0</b><span>Projetos entregues</span></div>
+            <div class="stat"><b data-count="100">0</b><span>% Responsivos</span></div>
+            <div class="stat"><b data-count="9">0</b><span>Serviços digitais</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__photo-wrap" id="heroPhoto">
+            <div class="hero__ring"></div>
+            <div class="hero__ring hero__ring--2"></div>
+            <div class="photo-stack" id="photoStack">
+              <img class="photo active" src="silvio 3.jpeg" alt="Silvio Cesar" />
+              <img class="photo" src="ChatGPT Image 5 de jul. de 2026, 12_12_03.png" alt="Silvio Cesar no computador" />
+              <img class="photo" src="WhatsApp Image 2026-07-05 at 12.06.22.jpeg" alt="Silvio Cesar no computador" />
+            </div>
+            <div class="float-chip chip--1"><i class="fa-solid fa-code"></i> Front-end</div>
+            <div class="float-chip chip--2"><i class="fa-solid fa-microchip"></i> IA Aplicada</div>
+            <div class="float-chip chip--3"><i class="fa-solid fa-wand-magic-sparkles"></i> UI / UX</div>
+          </div>
+        </div>
+      </div>
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar"><span></span>scroll</a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Criação de Sites</span><i>✦</i><span>Landing Pages</span><i>✦</i><span>E-commerce</span><i>✦</i><span>IA Aplicada</span><i>✦</i><span>UI / UX Design</span><i>✦</i><span>Tráfego Pago</span><i>✦</i>
+        <span>Criação de Sites</span><i>✦</i><span>Landing Pages</span><i>✦</i><span>E-commerce</span><i>✦</i><span>IA Aplicada</span><i>✦</i><span>UI / UX Design</span><i>✦</i><span>Tráfego Pago</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section sobre" id="sobre">
+      <div class="container two-col">
+        <div class="sobre__media reveal">
+          <div class="glass-card sobre__img" data-tilt>
+            <img src="WhatsApp Image 2026-07-05 at 12.35.51.jpeg" alt="Silvio Cesar" />
+            <div class="sobre__badge"><b>20</b><span>anos</span></div>
+          </div>
+        </div>
+        <div class="sobre__text">
+          <span class="eyebrow reveal">Sobre mim</span>
+          <h2 class="reveal">Olá, eu sou o <span class="grad-text">Silvio Cesar</span>.</h2>
+          <p class="reveal">Tenho 20 anos, sou de Cachoeira — Bahia e estou me formando em <strong>Gestão da Tecnologia da Informação</strong>. Trabalho desenvolvendo soluções digitais que unem design, tecnologia e Inteligência Artificial para gerar resultados reais.</p>
+          <p class="reveal">Meu foco é a <strong>criação de sites profissionais</strong>, landing pages de alta conversão, sistemas web, e-commerce e automações com IA — sempre com um padrão visual de alto nível e performance impecável.</p>
+          <div class="skills reveal">
+            <span><i class="fa-solid fa-laptop-code"></i> Front-end</span>
+            <span><i class="fa-solid fa-brain"></i> IA Aplicada</span>
+            <span><i class="fa-solid fa-pen-nib"></i> Designer</span>
+            <span><i class="fa-solid fa-film"></i> Editor de Vídeo</span>
+            <span><i class="fa-solid fa-bullhorn"></i> Tráfego Pago</span>
+          </div>
+          <a href="#contato" class="btn btn--primary reveal">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section servicos" id="servicos">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Serviços</span>
+          <h2 class="reveal">Tudo o que sua marca precisa <span class="grad-text">online</span></h2>
+          <p class="reveal">Do conceito ao lançamento — soluções digitais completas, com foco absoluto em performance e conversão.</p>
+        </div>
+
+        <div class="service-featured glass-card reveal" data-tilt>
+          <div class="service-featured__tag"><i class="fa-solid fa-star"></i> Principal serviço</div>
+          <div class="service-featured__body">
+            <h3>Criação de Sites Profissionais</h3>
+            <p>Sites rápidos, modernos e de alta conversão, desenvolvidos sob medida para transmitir autoridade e transformar visitantes em clientes. Design personalizado, responsivo, otimizado para SEO e integrado ao WhatsApp.</p>
+            <a href="#calculadora" class="btn btn--primary">Quero meu site <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-featured__glow"></div>
+        </div>
+
+        <div class="cards-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="section diferenciais" id="diferenciais">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Diferenciais</span>
+          <h2 class="reveal">Por que trabalhar <span class="grad-text">comigo</span></h2>
+        </div>
+        <div class="feat-grid" id="featGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFÓLIO ============ -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Portfólio</span>
+          <h2 class="reveal">Projetos que geram <span class="grad-text">resultado</span></h2>
+          <p class="reveal">Uma seleção de sites desenvolvidos para clientes reais.</p>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESSO ============ -->
+    <section class="section processo" id="processo">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Processo</span>
+          <h2 class="reveal">Como eu <span class="grad-text">trabalho</span></h2>
+        </div>
+        <div class="steps" id="stepsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PREÇOS ============ -->
+    <section class="section precos" id="precos">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Investimento</span>
+          <h2 class="reveal">Um plano <span class="grad-text">transparente</span></h2>
+          <p class="reveal">Sem letras miúdas. Você sabe exatamente o que está contratando.</p>
+        </div>
+
+        <div class="pricing reveal">
+          <div class="pricing__card glass-card" data-tilt>
+            <div class="pricing__badge">Plano padrão</div>
+            <h3>Criação do Site</h3>
+            <div class="pricing__price"><small>a partir de</small><b>R$ 1.100</b></div>
+            <ul class="pricing__list">
+              <li><i class="fa-solid fa-check"></i> Site completo e personalizado</li>
+              <li><i class="fa-solid fa-check"></i> Domínio <strong>GRÁTIS por 1 ano</strong></li>
+              <li><i class="fa-solid fa-check"></i> Design 100% sob medida</li>
+              <li><i class="fa-solid fa-check"></i> Totalmente responsivo</li>
+              <li><i class="fa-solid fa-check"></i> SEO básico</li>
+              <li><i class="fa-solid fa-check"></i> Integração com WhatsApp</li>
+              <li><i class="fa-solid fa-check"></i> Formulários de contato</li>
+            </ul>
+            <a href="#calculadora" class="btn btn--primary btn--block">Começar meu projeto</a>
+          </div>
+
+          <div class="pricing__side">
+            <div class="glass-card pricing__info">
+              <div class="pricing__info-icon"><i class="fa-solid fa-server"></i></div>
+              <h4>Hospedagem mensal</h4>
+              <p><b>R$ 100 / mês</b> — cobrada durante todo o período em que o site estiver no ar, garantindo servidor rápido, seguro e sempre online.</p>
+            </div>
+            <div class="notice notice--warn">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <p><strong>Sobre o domínio:</strong> o domínio é gratuito apenas no primeiro ano. Após esse período, será necessário pagar a renovação anual do domínio, além da continuidade da hospedagem mensal.</p>
+            </div>
+            <div class="notice">
+              <i class="fa-solid fa-circle-info"></i>
+              <p><strong>Atualizações futuras</strong> do site não estão inclusas no valor inicial. São cobradas separadamente conforme a necessidade do cliente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULADORA ============ -->
+    <section class="section calc" id="calculadora">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Simulador</span>
+          <h2 class="reveal">Calcule seu <span class="grad-text">orçamento</span></h2>
+          <p class="reveal">Monte seu projeto e receba uma estimativa na hora. O botão abre o WhatsApp com tudo preenchido.</p>
+        </div>
+
+        <div class="calc__wrap glass-card reveal">
+          <form class="calc__form" id="calcForm" autocomplete="off">
+            <div class="field">
+              <label>Seu nome</label>
+              <input type="text" id="calcName" placeholder="Ex: João Silva" />
+            </div>
+            <div class="field">
+              <label>Empresa</label>
+              <input type="text" id="calcCompany" placeholder="Nome da empresa (opcional)" />
+            </div>
+
+            <div class="field field--full">
+              <label>Tipo de site</label>
+              <div class="choice">
+                <button type="button" class="choice__btn active" data-price="1100" data-label="Landing Page">Landing Page</button>
+                <button type="button" class="choice__btn" data-price="1800" data-label="Institucional">Institucional</button>
+                <button type="button" class="choice__btn" data-price="3200" data-label="E-commerce">E-commerce</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Quantidade de páginas <span id="pagesVal" class="range-val">1</span></label>
+              <input type="range" id="calcPages" min="1" max="15" value="1" />
+            </div>
+            <div class="field">
+              <label>Urgência de entrega</label>
+              <select id="calcUrgency">
+                <option value="0">Padrão (sem pressa)</option>
+                <option value="350">Rápida (+ R$ 350)</option>
+                <option value="700">Expressa (+ R$ 700)</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label>Funcionalidades extras</label>
+              <div class="addons">
+                <label class="addon"><input type="checkbox" data-price="600" data-label="Área administrativa" /> <span>Área administrativa</span></label>
+                <label class="addon"><input type="checkbox" data-price="400" data-label="Blog" /> <span>Blog</span></label>
+                <label class="addon"><input type="checkbox" data-price="750" data-label="Sistema de agendamento" /> <span>Agendamento</span></label>
+                <label class="addon"><input type="checkbox" data-price="500" data-label="Integrações" /> <span>Integrações</span></label>
+                <label class="addon"><input type="checkbox" data-price="300" data-label="SEO avançado" /> <span>SEO avançado</span></label>
+                <label class="addon"><input type="checkbox" data-price="800" data-label="Design Premium" /> <span>Design Premium</span></label>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <label>Observações</label>
+              <textarea id="calcNotes" rows="2" placeholder="Conte um pouco sobre o projeto..."></textarea>
+            </div>
+          </form>
+
+          <aside class="calc__summary">
+            <span class="calc__summary-label">Valor estimado</span>
+            <div class="calc__total" id="calcTotal">R$ 1.100</div>
+            <p class="calc__note">+ hospedagem R$ 100/mês · domínio grátis no 1º ano</p>
+            <button type="button" class="btn btn--primary btn--block" id="calcWhats">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar no WhatsApp
+            </button>
+            <p class="calc__disclaimer">Estimativa inicial. O valor final é confirmado após o briefing.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section depoimentos" id="depoimentos">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal">Depoimentos</span>
+          <h2 class="reveal">O que dizem os <span class="grad-text">clientes</span></h2>
+        </div>
+        <div class="swiper testimonials reveal" id="testimonialsSwiper">
+          <div class="swiper-wrapper" id="testimonialsWrapper"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container narrow">
+        <div class="section__head">
+          <span class="eyebrow reveal">FAQ</span>
+          <h2 class="reveal">Perguntas <span class="grad-text">frequentes</span></h2>
+        </div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contato" id="contato">
+      <div class="container two-col">
+        <div class="contato__info">
+          <span class="eyebrow reveal">Contato</span>
+          <h2 class="reveal">Vamos tirar seu projeto <span class="grad-text">do papel</span></h2>
+          <p class="reveal">Responda o formulário e o WhatsApp abre com sua mensagem pronta. Sem burocracia.</p>
+          <ul class="contato__links reveal">
+            <li><a href="https://wa.me/5598992513797" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +55 98 99251-3797</a></li>
+            <li><a href="https://instagram.com/silviodevweb" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @silviodevweb</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> Silvio DevWeb</a></li>
+            <li><a href="https://github.com/silvio240" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/silvio240</a></li>
+            <li><a href="silviocesarvieirafilhov@gmail.com"><i class="fa-solid fa-envelope"></i> silviocesarvieirafilhov@gmail.com</a></li>
+          </ul>
+          <div class="contato__map glass-card reveal">
+            <iframe title="Mapa Cachoeira - BA" src="https://www.google.com/maps?q=Cachoeira,Bahia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form class="contato__form glass-card reveal" id="contactForm">
+          <div class="field"><label>Nome</label><input type="text" id="cfName" required /></div>
+          <div class="field"><label>Empresa</label><input type="text" id="cfCompany" /></div>
+          <div class="field"><label>Cidade</label><input type="text" id="cfCity" /></div>
+          <div class="field"><label>Telefone</label><input type="tel" id="cfPhone" /></div>
+          <div class="field field--full"><label>Email</label><input type="email" id="cfEmail" /></div>
+          <div class="field field--full">
+            <label>Tipo do projeto</label>
+            <select id="cfType">
+              <option>Criação de Site</option>
+              <option>Landing Page</option>
+              <option>Loja Virtual / E-commerce</option>
+              <option>Tráfego Pago</option>
+              <option>Design / UI-UX</option>
+              <option>Automação com IA</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="field field--full"><label>Mensagem</label><textarea id="cfMsg" rows="3"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--block"><i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <p class="footer__tag">Desenvolvedor Front-end · Especialista em IA Aplicada · Designer Digital & UI-UX</p>
+        </div>
+        <div class="footer__nav">
+          <a href="#servicos">Serviços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#precos">Preços</a>
+          <a href="#calculadora">Orçamento</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://wa.me/5598992513797" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com/silviodevweb" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/silvio240" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Silvio Cesar — SilvioDevWeb. Todos os direitos reservados.</span>
+        <span>Cachoeira · Bahia · Brasil</span>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5598992513797?text=Ol%C3%A1%20Silvio!%20Vim%20pelo%20seu%20site%20e%20quero%20um%20or%C3%A7amento." class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
